@@ -2,10 +2,11 @@ import "./App.css";
 import { TodoTable } from "./components/TodoTable";
 import React, { useState } from "react";
 import { NewTodoForm } from "./components/NewTodoForm";
+import { TodoModel } from "./models/TodoModel";
 
 export const App = () => {
   const [showAddTodoForm, setShowAddTodoForm] = useState(false);
-  const [todos, setTodos] = useState([{ rowNumber: 1, rowDescription: "Add your todos", rowAssignedTo: "Yes you!" }]);
+  const [todos, setTodos] = useState<TodoModel[]>([]);
 
   const addTodo = (description: string, assignedTo: string) => {
     let rowNumber = 0;
