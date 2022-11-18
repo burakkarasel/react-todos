@@ -26,5 +26,3 @@ export const TodoTable: React.FC<{ todos: TodoModel[], deleteTodo: Function }> =
     </table>
   );
 }
-
-export default TodoTable;
